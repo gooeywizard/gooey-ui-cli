@@ -2,30 +2,36 @@
 
 const program = require('commander');
 
-function help() {
-	console.log('Help');
+/*
+ * Creates a new project based on the provided template.
+ * If no template is provided, it uses a basic shell template.
+ */
+function init(template) {
+	console.log(template);
 }
 
-function generate(one, two, three) {
-	console.log('generate ' + one + two + three);
+/**
+ * Generates the admin GUI and backend.
+ */
+function generateAdmin() {
+	console.log('generateAdmin');
 }
 
-program
-	.version('0.0.1')
-	.description('Test CLI');
+// Initialize the commander instance
+program.version('0.0.2').description('GooeyUI CLI');
 
-program
-	.command('help')
-	.alias('h')
-	.description('Get help')
-	.action(help);
-
-program
-	.command('generate <one> <two> <three>')
-	.alias('g')
-	.description('Generate something')
-	.action((one, two, three) => {
-		generate(one, two, three);
+// Configure the init command
+program.command('init [template]')
+	.alias('i')
+	.description('Create a new GooeyUI project from a template.')
+	.action((template) => {
+		initProject(template);
 	});
+
+// Configure the generate command
+program.command('generateAdmin')
+	.alias('g')
+	.description('Generate the admin GUI and backend.')
+	.action(generateAdmin);
 
 program.parse(process.argv);

@@ -1,11 +1,12 @@
 {
   "name": "gooey-ui-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Command-line interface for GooeyUI.",
-  "main": "index.js",
+  "repository": "https://github.com/gooeywizard/gooey-ui-cli.git",
+  "main": "gooey-ui-cli.js",
   "preferGlobal": true,
   "bin": {
-	  "gooey-ui": "./gooey-ui-cli.js"
+    "gooey-ui": "./gooey-ui-cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +14,6 @@
   "author": "GooeyWizard",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.13.0",
-    "inquirer": "^5.0.1"
+    "commander": "^2.13.0"
   }
 }
